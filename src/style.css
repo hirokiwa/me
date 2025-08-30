@@ -179,6 +179,10 @@ ul {
   font-weight: 800;
 }
 
+.profile__description {  
+  word-break: keep-all;
+}
+
 .section-heading {
   font-size: xx-large;
   font-weight: 800;
