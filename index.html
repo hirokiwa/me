@@ -9,7 +9,11 @@
   </head>
   <body>
     <main class="main-contents">
+      <span class="head-title">me</span>
       <section class="profile" aria-labelledby="profile-heading">
+        <div class="model-viewer">
+          <canvas id="model-canvas" class="model-viewer__canvas"></canvas>
+        </div>
         <h1 id="profile-heading" class="profile__heading">ひろきゎ</h1>
         <p class="profile__description">大学時代にデジタルなものづくりと出会い、ソフトウェアエンジニアを志しました。IT企業で働きながら、趣味でアプリ開発やデジタルコンテンツの制作をおこなっています。</p>
         <nav class="profile__nav" aria-label="ソーシャルリンク">
@@ -138,9 +142,9 @@
           </li>
         </ul>
       </section>
-    </main>
     <footer class="footer">
       <p><small>&copy; 2025 ひろきゎ</small></p>
     </footer>
+    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

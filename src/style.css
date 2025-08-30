@@ -121,7 +121,7 @@ ul {
 
 .main-contents {
   max-width: 600px;
-  padding: 42px 16px;
+  padding: 16px 16px 42px 16px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -211,4 +211,26 @@ ul {
   font-size: small;
   padding-left: 0.25rem;
   vertical-align: middle;
+}
+
+.model-viewer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.model-viewer {
+  padding: 2rem 0;
+}
+
+.model-viewer__canvas {
+  background: linear-gradient(to right, rgba(191, 55, 106, 0.7), rgba(137, 110, 200, 0.7));
+  aspect-ratio: 1 / 1;
+  width: 50%;
+  border-radius: 50%;
+}
+
+.head-title {
+  font-size: x-large;
+  font-weight: 600;
 }
