@@ -120,7 +120,7 @@ ul {
 }
 
 .main-contents {
-  max-width: 600px;
+  max-width: 800px;
   padding: 16px 16px 42px 16px;
   display: flex;
   flex-direction: column;
@@ -174,6 +174,11 @@ ul {
   align-self: start;
 }
 
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
 .profile__heading {
   font-size: xx-large;
   font-weight: 800;
@@ -219,11 +224,9 @@ ul {
 
 .model-viewer {
   display: flex;
+  align-self: center;
   justify-content: center;
   align-items: center;
-}
-
-.model-viewer {
   padding: 2rem 0;
 }
 
@@ -237,4 +240,36 @@ ul {
 .head-title {
   font-size: x-large;
   font-weight: 600;
+}
+
+@media (min-width: 800px) {  
+  .profile {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 4rem 0;
+  }
+
+  .model-viewer {
+    width: 40%;
+    padding-right: 3rem;
+  }
+
+  .model-viewer__canvas {
+    width: 100%;
+  }
+
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+    width: 55%;
+  }
+
+  .project-card__image {
+    margin: 1rem 0;
+  }
 }
