@@ -221,9 +221,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.model-viewer {
   padding: 2rem 0;
 }
 
