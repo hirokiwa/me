@@ -238,3 +238,9 @@ ul {
   font-size: x-large;
   font-weight: 600;
 }
+
+@media (min-width: 800px) {
+  .model-viewer__canvas {
+    width: 60%;
+  }
+}
