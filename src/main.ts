@@ -9,19 +9,13 @@ if (!canvas) {
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(
-  50,
-  canvas.offsetWidth / canvas.offsetHeight,
-  0.1,
-  1000,
-);
+const camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
 camera.position.z = 2;
 
 const renderer = new THREE.WebGLRenderer({
   canvas,
   alpha: true,
 });
-renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 const controls = new OrbitControls(camera, renderer.domElement);
@@ -47,10 +41,26 @@ plyLoader.load(
 
 
 
-const handleResize = () => {
-  renderer.setSize(canvas.offsetWidth, canvas.offsetHeight);
-  camera.aspect = canvas.offsetWidth / canvas.offsetHeight;
+const updateCanvasSize = () => {
+  const { width, height } = canvas.getBoundingClientRect();
+  if (width === 0 || height === 0) {
+    return;
+  }
+  renderer.setSize(width, height, false);
+  camera.aspect = width / height;
   camera.updateProjectionMatrix();
+};
+
+const observeCanvasSize = () => {
+  if (typeof ResizeObserver === 'undefined') {
+    window.addEventListener('resize', updateCanvasSize);
+    return;
+  }
+  const resizeObserver = new ResizeObserver(() => {
+    updateCanvasSize();
+  });
+  resizeObserver.observe(canvas);
+  window.addEventListener('resize', updateCanvasSize);
 };
 
 const tick = () => {
@@ -59,6 +69,7 @@ const tick = () => {
   window.requestAnimationFrame(tick);
 };
 
-window.addEventListener('resize', handleResize);
+updateCanvasSize();
+observeCanvasSize();
 
 tick();
