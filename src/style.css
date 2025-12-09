@@ -134,6 +134,48 @@ ul {
   background: #f7f7f7;
 }
 
+.project-card__banner {
+  margin: 1rem 0;
+}
+
+.project-card__banner-link {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  outline: none;
+  transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card__banner-link:hover,
+.project-card__banner-link:focus-visible {
+  border-radius: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.project-card__banner-link:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.7);
+  outline-offset: 4px;
+}
+
+.project-card__banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.project-card__banner-link:hover .project-card__banner-image,
+.project-card__banner-link:focus-visible .project-card__banner-image {
+  transform: scale(1.02);
+}
+
+.blog-carousel__container {
+  margin-right: -16px;
+  margin-left: -16px;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
