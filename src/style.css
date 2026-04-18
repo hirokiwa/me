@@ -180,6 +180,13 @@ ul {
   border-width: 0;
 }
 
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .link-list {
   display: flex;
   flex-direction: column;
