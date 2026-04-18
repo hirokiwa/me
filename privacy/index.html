@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="{{common.htmlLang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{privacy.meta.title}}</title>
+    <meta name="description" content="{{privacy.meta.description}}" />
+    <link rel="canonical" href="{{privacy.seo.canonicalUrl}}" />
+    <link rel="alternate" hreflang="ja" href="{{privacy.seo.jaUrl}}" />
+    <link rel="alternate" hreflang="en" href="{{privacy.seo.enUrl}}" />
+    <link rel="alternate" hreflang="x-default" href="{{privacy.seo.jaUrl}}" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/src/legal-shared.css" />
+    <link rel="stylesheet" href="/src/privacy-page.css" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="screen-reader-only" aria-hidden="true" focusable="false">
+      <defs>
+        <path id="icon-language" d="M325-111.5q-73-31.5-127.5-86t-86-127.5Q80-398 80-480.5t31.5-155q31.5-72.5 86-127t127.5-86Q398-880 480.5-880t155 31.5q72.5 31.5 127 86t86 127Q880-563 880-480.5T848.5-325q-31.5 73-86 127.5t-127 86Q563-80 480.5-80T325-111.5ZM480-162q26-36 45-75t31-83H404q12 44 31 83t45 75Zm-104-16q-18-33-31.5-68.5T322-320H204q29 50 72.5 87t99.5 55Zm208 0q56-18 99.5-55t72.5-87H638q-9 38-22.5 73.5T584-178ZM170-400h136q-3-20-4.5-39.5T300-480q0-21 1.5-40.5T306-560H170q-5 20-7.5 39.5T160-480q0 21 2.5 40.5T170-400Zm216 0h188q3-20 4.5-39.5T580-480q0-21-1.5-40.5T574-560H386q-3 20-4.5 39.5T380-480q0 21 1.5 40.5T386-400Zm268 0h136q5-20 7.5-39.5T800-480q0-21-2.5-40.5T790-560H654q3 20 4.5 39.5T660-480q0 21-1.5 40.5T654-400Zm-16-240h118q-29-50-72.5-87T584-782q18 33 31.5 68.5T638-640Zm-234 0h152q-12-44-31-83t-45-75q-26 36-45 75t-31 83Zm-200 0h118q9-38 22.5-73.5T376-782q-56 18-99.5 55T204-640Z" />
+        <path id="icon-home" d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+        <path id="icon-mail" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+        <path id="icon-privacy" d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z" />
+        <path id="icon-external" d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" />
+      </defs>
+    </svg>
+    <div class="legal-page">
+      <main class="legal-page__main">
+        <article class="legal-page__article">
+          <header class="legal-page__header">
+            <div class="legal-page__tools">
+              <span class="legal-page__head-title">{{common.headTitle}}</span>
+              <nav aria-label="{{privacy.localeSwitcher.ariaLabel}}">
+                <a class="legal-language-link" href="{{privacy.localeSwitcher.href}}" hreflang="{{privacy.localeSwitcher.lang}}" lang="{{privacy.localeSwitcher.lang}}">
+                  <svg viewBox="0 -960 960 960" class="legal-language-link__icon" aria-hidden="true" focusable="false"><use href="#icon-language" /></svg>
+                  <span>{{privacy.localeSwitcher.label}}</span>
+                </a>
+              </nav>
+            </div>
+            <nav class="legal-page__top-nav" aria-label="{{privacy.footer.ariaLabel}}">
+              <a class="legal-footer-link" href="{{common.nav.homeHref}}">
+                <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-home" /></svg>
+                <span>{{common.nav.homeLabel}}</span>
+              </a>
+              <a class="legal-footer-link" href="{{common.nav.contactHref}}">
+                <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-mail" /></svg>
+                <span>{{common.nav.contactLabel}}</span>
+              </a>
+              <a class="legal-footer-link" href="{{common.nav.privacyHref}}" aria-current="page">
+                <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-privacy" /></svg>
+                <span>{{common.nav.privacyLabel}}</span>
+              </a>
+            </nav>
+            <hgroup class="legal-page__heading-group">
+              <p class="legal-page__site-name">{{common.brandName}}</p>
+              <h1 id="privacy-policy-title" class="legal-page__title">{{privacy.title}}</h1>
+              <p class="legal-page__lead">{{privacy.lead}}</p>
+            </hgroup>
+          </header>
+          <div class="legal-page__section-list privacy-page__section-list">
+            <section class="legal-page__section" aria-labelledby="privacy-section-1">
+              <h2 id="privacy-section-1" class="legal-page__section-title">{{privacy.section1.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section1.body}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-2">
+              <h2 id="privacy-section-2" class="legal-page__section-title">{{privacy.section2.title}}</h2>
+              <ul class="legal-page__list">
+                <li>{{privacy.section2.item1}}</li>
+                <li>{{privacy.section2.item2}}</li>
+              </ul>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section2.body}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-3">
+              <h2 id="privacy-section-3" class="legal-page__section-title">{{privacy.section3.title}}</h2>
+              <h3 class="legal-page__subsection-title">{{privacy.section3.subsection1.title}}</h3>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section3.subsection1.body1}}</p>
+                <p>{{privacy.section3.subsection1.body2Prefix}}<a class="legal-link legal-link--external" href="https://www.google.com/settings/ads" target="_blank" rel="noreferrer"><span>{{privacy.section3.subsection1.link1Label}}</span><svg viewBox="0 -960 960 960" class="legal-link__icon" aria-hidden="true" focusable="false"><use href="#icon-external" /></svg><span class="screen-reader-only">{{common.externalLinkSrOnly}}</span></a>{{privacy.section3.subsection1.body2Middle1}}<a class="legal-link legal-link--external" href="https://www.aboutads.info" target="_blank" rel="noreferrer"><span>{{privacy.section3.subsection1.link2Label}}</span><svg viewBox="0 -960 960 960" class="legal-link__icon" aria-hidden="true" focusable="false"><use href="#icon-external" /></svg><span class="screen-reader-only">{{common.externalLinkSrOnly}}</span></a>{{privacy.section3.subsection1.body2Middle2}}<a class="legal-link legal-link--external" href="https://www.google.co.jp/policies/technologies/ads/" target="_blank" rel="noreferrer"><span>{{privacy.section3.subsection1.link3Label}}</span><svg viewBox="0 -960 960 960" class="legal-link__icon" aria-hidden="true" focusable="false"><use href="#icon-external" /></svg><span class="screen-reader-only">{{common.externalLinkSrOnly}}</span></a>{{privacy.section3.subsection1.body2Suffix}}</p>
+              </div>
+              <h3 class="legal-page__subsection-title">{{privacy.section3.subsection2.title}}</h3>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section3.subsection2.bodyPrefix}}<a class="legal-link legal-link--external" href="https://marketingplatform.google.com/about/analytics/terms/jp/" target="_blank" rel="noreferrer"><span>{{privacy.section3.subsection2.linkLabel}}</span><svg viewBox="0 -960 960 960" class="legal-link__icon" aria-hidden="true" focusable="false"><use href="#icon-external" /></svg><span class="screen-reader-only">{{common.externalLinkSrOnly}}</span></a>{{privacy.section3.subsection2.bodySuffix}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-4">
+              <h2 id="privacy-section-4" class="legal-page__section-title">{{privacy.section4.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section4.body1}}</p>
+                <p>{{privacy.section4.body2}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-5">
+              <h2 id="privacy-section-5" class="legal-page__section-title">{{privacy.section5.title}}</h2>
+              <ol class="legal-page__ordered-list">
+                <li>{{privacy.section5.item1}}</li>
+                <li>{{privacy.section5.item2}}</li>
+                <li>{{privacy.section5.item3}}</li>
+                <li>{{privacy.section5.item4}}</li>
+                <li>{{privacy.section5.item5}}</li>
+              </ol>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-6">
+              <h2 id="privacy-section-6" class="legal-page__section-title">{{privacy.section6.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section6.body1}}</p>
+              </div>
+              <ol class="legal-page__ordered-list">
+                <li>{{privacy.section6.item1}}</li>
+                <li>{{privacy.section6.item2}}</li>
+                <li>{{privacy.section6.item3}}</li>
+              </ol>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section6.body2}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-7">
+              <h2 id="privacy-section-7" class="legal-page__section-title">{{privacy.section7.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section7.body1}}</p>
+                <p>{{privacy.section7.body2}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-8">
+              <h2 id="privacy-section-8" class="legal-page__section-title">{{privacy.section8.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section8.body1}}</p>
+                <p>{{privacy.section8.body2}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-9">
+              <h2 id="privacy-section-9" class="legal-page__section-title">{{privacy.section9.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section9.body1}}</p>
+                <p>{{privacy.section9.body2}}</p>
+              </div>
+            </section>
+            <section class="legal-page__section" aria-labelledby="privacy-section-10">
+              <h2 id="privacy-section-10" class="legal-page__section-title">{{privacy.section10.title}}</h2>
+              <div class="legal-page__paragraph-group">
+                <p>{{privacy.section10.bodyPrefix}}<a class="legal-link" href="{{common.nav.contactHref}}">{{common.nav.contactLabel}}</a>{{privacy.section10.bodySuffix}}</p>
+              </div>
+            </section>
+          </div>
+        </article>
+      </main>
+      <footer class="legal-page__footer">
+        <div class="legal-page__footer-inner">
+          <nav class="legal-page__footer-nav" aria-label="{{privacy.footer.ariaLabel}}">
+            <a class="legal-footer-link" href="{{common.nav.homeHref}}">
+              <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-home" /></svg>
+              <span>{{common.nav.homeLabel}}</span>
+            </a>
+            <a class="legal-footer-link" href="{{common.nav.contactHref}}">
+              <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-mail" /></svg>
+              <span>{{common.nav.contactLabel}}</span>
+            </a>
+            <a class="legal-footer-link" href="{{common.nav.privacyHref}}" aria-current="page">
+              <svg viewBox="0 -960 960 960" class="legal-footer-link__icon" aria-hidden="true" focusable="false"><use href="#icon-privacy" /></svg>
+              <span>{{common.nav.privacyLabel}}</span>
+            </a>
+          </nav>
+          <p class="legal-page__footer-credit">{{privacy.footer.credit}}</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

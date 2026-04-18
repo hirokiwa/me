@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{page.lang}}">
+<html lang="{{common.htmlLang}}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,13 +28,16 @@
         <path id="icon-trending-up" d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" />
         <path id="icon-article" d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
         <path id="icon-edit" d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z" />
+        <path id="icon-home" d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
+        <path id="icon-mail" d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z" />
+        <path id="icon-privacy" d="M440-280h80v-240h-80v240Zm68.5-331.5Q520-623 520-640t-11.5-28.5Q497-680 480-680t-28.5 11.5Q440-657 440-640t11.5 28.5Q463-600 480-600t28.5-11.5ZM480-80q-139-35-229.5-159.5T160-516v-244l320-120 320 120v244q0 152-90.5 276.5T480-80Zm0-84q104-33 172-132t68-220v-189l-240-90-240 90v189q0 121 68 220t172 132Zm0-316Z" />
         <path id="icon-play" d="M320-200v-560l440 280-440 280Z" />
         <path id="icon-pause" d="M280-200v-560h160v560H280Zm240 0v-560h160v560H520Z" />
       </defs>
     </svg>
     <main class="main-contents">
       <div class="page-tools">
-        <span class="head-title">me</span>
+        <span class="head-title">{{common.headTitle}}</span>
         <nav class="locale-switcher" aria-label="{{localeSwitcher.ariaLabel}}">
           <a href="{{localeSwitcher.href}}" class="locale-switcher__link" lang="{{localeSwitcher.lang}}">
             <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="locale-switcher__icon icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-language"/></svg>
@@ -67,6 +70,12 @@
                 <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="link-item__icon" aria-hidden="true" focusable="false"><use href="#icon-x"/></svg>
                 <span class="link-item__text">{{profile.socialLinkLabel}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-open-in-new"/></svg></span></span>
                 <span class="sr-only">{{common.externalLinkSrOnly}}</span>
+              </a>
+            </li>
+            <li class="link-list__item">
+              <a href="{{common.nav.contactHref}}" class="link-item">
+                <svg viewBox="0 -960 960 960" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-mail"/></svg>
+                <span class="link-item__text">{{common.nav.contactLabel}}</span>
               </a>
             </li>
           </ul>
@@ -239,6 +248,20 @@
         </ul>
       </section>
       <footer class="footer">
+        <nav class="footer__nav" aria-label="{{footer.ariaLabel}}">
+          <a href="{{common.nav.homeHref}}" class="footer__link" aria-current="page">
+            <svg viewBox="0 -960 960 960" class="footer__link-icon icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-home"/></svg>
+            <span>{{common.nav.homeLabel}}</span>
+          </a>
+          <a href="{{common.nav.contactHref}}" class="footer__link">
+            <svg viewBox="0 -960 960 960" class="footer__link-icon icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-mail"/></svg>
+            <span>{{common.nav.contactLabel}}</span>
+          </a>
+          <a href="{{common.nav.privacyHref}}" class="footer__link">
+            <svg viewBox="0 -960 960 960" class="footer__link-icon icon-symbol" aria-hidden="true" focusable="false"><use href="#icon-privacy"/></svg>
+            <span>{{common.nav.privacyLabel}}</span>
+          </a>
+        </nav>
         <p><small>{{footer.copyright}}</small></p>
       </footer>
       <script type="module" src="/src/main.ts"></script>

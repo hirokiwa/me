@@ -1,0 +1,22 @@
+.contact-page__note {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-page__frame-shell,
+.contact-page__frame-shell .legal-frame {
+  border: 0;
+}
+
+.contact-page__frame-shell .legal-frame {
+  min-block-size: 72rem;
+}
+
+@media (width <= 600px) {
+  .contact-page__frame-shell,
+  .contact-page__frame-shell .legal-frame {
+    inline-size: 100vw;
+    margin-inline: calc(50% - 50vw);
+  }
+}

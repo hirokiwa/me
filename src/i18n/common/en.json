@@ -1,0 +1,12 @@
+{
+  "common.htmlLang": "en",
+  "common.brandName": "Hirokiwa",
+  "common.headTitle": "me",
+  "common.externalLinkSrOnly": "(opens in a new tab)",
+  "common.nav.homeHref": "/en/",
+  "common.nav.homeLabel": "Home",
+  "common.nav.contactHref": "/en/contact/",
+  "common.nav.contactLabel": "Contact",
+  "common.nav.privacyHref": "/en/privacy/",
+  "common.nav.privacyLabel": "Privacy Policy"
+}

@@ -1,0 +1,12 @@
+{
+  "common.htmlLang": "ja",
+  "common.brandName": "ひろきゎ",
+  "common.headTitle": "me",
+  "common.externalLinkSrOnly": "（新しいタブで開きます）",
+  "common.nav.homeHref": "/",
+  "common.nav.homeLabel": "ホーム",
+  "common.nav.contactHref": "/contact/",
+  "common.nav.contactLabel": "お問い合わせ",
+  "common.nav.privacyHref": "/privacy/",
+  "common.nav.privacyLabel": "プライバシーポリシー"
+}

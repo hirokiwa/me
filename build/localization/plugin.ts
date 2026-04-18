@@ -6,8 +6,6 @@ import { loadLocaleDefinitions } from './locales';
 import { renderLocalizedHtml } from './renderHtml';
 import type { LocaleDefinition } from './types';
 
-const templateHtmlPath = path.resolve(process.cwd(), 'index.html');
-
 const googleTagId = 'G-D598T36NNK';
 
 const googleTagScripts: HtmlTagDescriptor[] = [
@@ -49,7 +47,10 @@ const resolveLocaleDefinition = (
   return matchedLocaleDefinition ?? localeDefinitions[0];
 };
 
-const createEnPageMiddleware = (
+const getTemplateHtmlPath = (localeDefinition: LocaleDefinition) =>
+  path.resolve(process.cwd(), localeDefinition.templatePath);
+
+const createLocalizedPageMiddleware = (
   server: Parameters<Plugin['configureServer']>[0],
   localeDefinitionsPromise: Promise<LocaleDefinition[]>,
 ): Connect.NextHandleFunction => async (
@@ -58,15 +59,17 @@ const createEnPageMiddleware = (
   next: Connect.NextFunction,
 ) => {
   const requestPath = normalizeRequestPath(request.url ?? '/');
+  const localeDefinitions = await localeDefinitionsPromise;
+  const localeDefinition = localeDefinitions.find(
+    (localeDefinitionEntry) => localeDefinitionEntry.pagePath === requestPath,
+  );
 
-  if (requestPath !== '/en/') {
+  if (!localeDefinition) {
     next();
     return;
   }
 
-  const localeDefinitions = await localeDefinitionsPromise;
-  const localeDefinition = resolveLocaleDefinition(localeDefinitions, requestPath);
-  const templateHtml = await readFile(templateHtmlPath, 'utf8');
+  const templateHtml = await readFile(getTemplateHtmlPath(localeDefinition), 'utf8');
   const localizedHtml = renderLocalizedHtml(templateHtml, localeDefinition);
   const transformedHtml = await server.transformIndexHtml(requestPath, localizedHtml);
 
@@ -85,7 +88,7 @@ export const createLocalizedHtmlPlugin = (): Plugin => {
       resolvedConfigState.config = config;
     },
     configureServer(server) {
-      server.middlewares.use(createEnPageMiddleware(server, localeDefinitionsPromise));
+      server.middlewares.use(createLocalizedPageMiddleware(server, localeDefinitionsPromise));
     },
     transformIndexHtml: {
       order: 'pre',
@@ -112,23 +115,35 @@ export const createLocalizedHtmlPlugin = (): Plugin => {
       const outDirectoryPath = resolvedConfigState.config
         ? path.resolve(resolvedConfigState.config.root, resolvedConfigState.config.build.outDir)
         : path.resolve(process.cwd(), 'dist');
-      const rootIndexHtmlPath = path.join(outDirectoryPath, 'index.html');
-      const builtHtml = await readFile(rootIndexHtmlPath, 'utf8').catch(() => '');
+      const templatePaths = [...new Set(localeDefinitions.map((localeDefinition) => localeDefinition.templatePath))];
+      const templateHtmlEntries = await Promise.all(
+        templatePaths.map(async (templatePath) => {
+          const builtTemplateHtml = await readFile(path.join(outDirectoryPath, templatePath), 'utf8').catch(() => '');
 
-      if (builtHtml === '') {
-        throw new Error('Built index.html was not found.');
-      }
+          if (builtTemplateHtml === '') {
+            throw new Error(`Built template HTML was not found: ${templatePath}`);
+          }
 
-      const japaneseLocaleDefinition = resolveLocaleDefinition(localeDefinitions, '/');
-      const englishLocaleDefinition = resolveLocaleDefinition(localeDefinitions, '/en/');
-      const japaneseHtml = renderLocalizedHtml(builtHtml, japaneseLocaleDefinition);
-      const englishHtml = renderLocalizedHtml(builtHtml, englishLocaleDefinition);
-      const englishIndexDirectoryPath = path.join(outDirectoryPath, 'en');
-      const englishIndexHtmlPath = path.join(englishIndexDirectoryPath, 'index.html');
+          return [templatePath, builtTemplateHtml] as const;
+        }),
+      );
+      const templateHtmlByPath = new Map(templateHtmlEntries);
 
-      await mkdir(englishIndexDirectoryPath, { recursive: true });
-      await writeFile(rootIndexHtmlPath, japaneseHtml);
-      await writeFile(englishIndexHtmlPath, englishHtml);
+      await Promise.all(
+        localeDefinitions.map(async (localeDefinition) => {
+          const builtTemplateHtml = templateHtmlByPath.get(localeDefinition.templatePath);
+
+          if (!builtTemplateHtml) {
+            throw new Error(`Template HTML cache miss: ${localeDefinition.templatePath}`);
+          }
+
+          const localizedHtml = renderLocalizedHtml(builtTemplateHtml, localeDefinition);
+          const outputHtmlPath = path.join(outDirectoryPath, localeDefinition.outputPath);
+
+          await mkdir(path.dirname(outputHtmlPath), { recursive: true });
+          await writeFile(outputHtmlPath, localizedHtml);
+        }),
+      );
     },
   };
 };
