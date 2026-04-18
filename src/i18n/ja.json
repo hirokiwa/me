@@ -8,6 +8,8 @@
   "profile.heading": "ひろきゎ",
   "profile.descriptionHtml": "大学時代に<wbr>デジタルなものづくりと出会い、<wbr>ソフトウェアエンジニアを<wbr>志しました。<wbr>IT企業で働きながら、<wbr>趣味でアプリ開発や<wbr>デジタルコンテンツの制作を<wbr>おこなっています。",
   "profile.socialNavAriaLabel": "ソーシャルリンク",
+  "profile.modelRotationPauseLabel": "3Dモデルの自動再生を一時停止",
+  "profile.modelRotationResumeLabel": "3Dモデルの自動再生を再開",
   "profile.socialLinkLabel": "X (Twitter) @hirokiwasan",
   "common.externalLinkSrOnly": "（新しいタブで開きます）",
   "contents.heading": "Contents",

@@ -8,6 +8,8 @@
   "profile.heading": "Hirokiwa",
   "profile.descriptionHtml": "A developer based in Japan. I discovered digital making at university and decided to become a software engineer.<wbr> While working at an IT company, I also build apps and create digital content as personal projects.",
   "profile.socialNavAriaLabel": "Social links",
+  "profile.modelRotationPauseLabel": "Pause 3D model auto-rotation",
+  "profile.modelRotationResumeLabel": "Resume 3D model auto-rotation",
   "profile.socialLinkLabel": "X (Twitter) @hirokiwasan",
   "common.externalLinkSrOnly": "(opens in a new tab)",
   "contents.heading": "Contents",
