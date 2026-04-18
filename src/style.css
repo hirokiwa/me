@@ -414,9 +414,51 @@ ul {
   font-weight: 600;
 }
 
+.page-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.locale-switcher {
+  display: flex;
+}
+
+.locale-switcher__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.75rem;
+  border: 1px solid transparent;
+  color: #555555;
+  font-size: 0.8rem;
+  font-weight: bold;
+  line-height: 1;
+  background-color: rgba(255, 255, 255, 0.92);
+  transition: border .16s, transform .16s,color .16s;
+}
+
+.locale-switcher__label {
+  white-space: nowrap;
+}
+
+.locale-switcher__icon.material-symbols-outlined {
+  font-size: 1rem;
+}
+
 @media (min-width: 800px) {
   .model-viewer__canvas {
     width: 60%;
+  }
+}
+
+@media (any-hover: hover) {
+  .locale-switcher__link:hover,
+  .locale-switcher__link:focus-visible {
+    border: 1px solid rgba(119, 119, 119, 0.24);
+    transform: translateY(-1px);
+    color: #222222;
   }
 }
 
