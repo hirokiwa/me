@@ -18,7 +18,6 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <link rel="stylesheet" href="/src/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   </head>
   <body>
     <main class="main-contents">
@@ -26,7 +25,7 @@
         <span class="head-title">me</span>
         <nav class="locale-switcher" aria-label="{{localeSwitcher.ariaLabel}}">
           <a href="{{localeSwitcher.href}}" class="locale-switcher__link" lang="{{localeSwitcher.lang}}">
-            <span class="locale-switcher__icon material-symbols-outlined" aria-hidden="true">translate</span>
+            <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="locale-switcher__icon icon-symbol" aria-hidden="true" focusable="false"><path d="m476-80 182-480h84L924-80h-84l-43-122H603L560-80h-84ZM160-200l-56-56 202-202q-35-35-63.5-80T190-640h84q20 39 40 68t48 58q33-33 68.5-92.5T484-720H40v-80h280v-80h80v80h280v80H564q-21 72-63 148t-83 116l96 98-30 82-122-125-202 201Zm468-72h144l-72-204-72 204Z"/></svg>
             <span class="locale-switcher__label">{{localeSwitcher.label}}</span>
           </a>
         </nav>
@@ -42,7 +41,7 @@
             <li class="link-list__item">
               <a href="https://x.com/hirokiwasan" target="_blank" rel="noopener noreferrer" class="link-item">
                 <svg viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg" class="link-item__icon" aria-hidden="true" focusable="false"><path d="M6.79361 5.36249L9.89638 1.8335H9.16138L6.46611 4.89704L4.31499 1.8335H1.83333L5.08694 6.46656L1.83333 10.1668H2.56833L5.41277 6.9309L7.68499 10.1668H10.1667M2.83361 2.37582H3.96277L9.16083 9.65112H8.03138" fill="currentColor"/></svg>
-                <span class="link-item__text">{{profile.socialLinkLabel}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                <span class="link-item__text">{{profile.socialLinkLabel}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                 <span class="sr-only">{{common.externalLinkSrOnly}}</span>
               </a>
             </li>
@@ -58,7 +57,7 @@
               <img src="https://grandring.hirokiwa.com/ogp-image.jpg" alt="{{grandring.imageAlt}}" width="1200" height="630" class="project-card__image">
               <h3 class="project-card__title">{{grandring.title}}</h3>
               <a href="https://grandring.hirokiwa.com/" target="_blank" rel="noopener noreferrer" class="link-item link-item--main">
-                <span class="link-item__text">{{grandring.mainLinkLabel}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                <span class="link-item__text">{{grandring.mainLinkLabel}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                 <span class="sr-only">{{common.externalLinkSrOnly}}</span>
               </a>
               <p class="project-card__description">{{grandring.description}}</p>
@@ -77,9 +76,9 @@
                 <div class="trend-card__overlay" aria-hidden="true"></div>
                 <div class="trend-card__content">
                   <div class="trend-card__eyebrow">
-                    <span class="trend-card__icon material-symbols-outlined" aria-hidden="true">trending_up</span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="trend-card__icon icon-symbol" aria-hidden="true" focusable="false"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z"/></svg>
                     <span class="trend-card__label">{{grandring.trendLabel}}</span>
-                    <span class="trend-card__eyebrow-icon material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="trend-card__eyebrow-icon icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </div>
                   <h5 id="grandring-trend-title" class="trend-card__title">{{grandring.trendTitle}}</h5>
@@ -101,22 +100,22 @@
               <ul class="link-list">
                 <li class="link-list__item">
                   <a href="https://www.yomiuri.co.jp/expo2025/now/20250921-OYO1T50043/" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.interviewLink1}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.interviewLink1}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
                 <li class="link-list__item">
                   <a href="https://www.topics.or.jp/articles/-/1311915" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.interviewLink2}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.interviewLink2}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
                 <li class="link-list__item">
                   <a href="https://www.kyoto-np.co.jp/articles/-/1560755" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.interviewLink3}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.interviewLink3}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
@@ -125,22 +124,22 @@
               <ul class="link-list">
                 <li class="link-list__item">
                   <a href="https://news.yahoo.co.jp/expert/articles/25695fb084878f76ae7800705c54189155e52ec0" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.featureLink1}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.featureLink1}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
                 <li class="link-list__item">
                   <a href="https://www.itmedia.co.jp/news/articles/2508/25/news068.html" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.featureLink2}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.featureLink2}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
                 <li class="link-list__item">
                   <a href="https://xtrend.nikkei.com/atcl/contents/18/00921/00042/" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">article</span>
-                    <span class="link-item__text">{{grandring.featureLink3}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/></svg>
+                    <span class="link-item__text">{{grandring.featureLink3}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
@@ -152,7 +151,7 @@
               <img src="https://github.com/hirokiwa/ai-blog-client/assets/89170014/131328d9-2bfc-411d-9ee6-da636d0de095" alt="{{aiBlog.imageAlt}}" width="1200" height="630" class="project-card__image">
               <h3 class="project-card__title"><span class="project-card__title--sub">{{aiBlog.titleSub}}</span>{{aiBlog.title}}</h3>
               <a href="https://ai-blog.hirokiwa.com/" target="_blank" rel="noopener noreferrer" class="link-item link-item--main">
-                <span class="link-item__text">{{aiBlog.mainLinkLabel}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                <span class="link-item__text">{{aiBlog.mainLinkLabel}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                 <span class="sr-only">{{common.externalLinkSrOnly}}</span>
               </a>
               <p class="project-card__description">{{aiBlog.description}}</p>
@@ -174,8 +173,8 @@
               <ul class="link-list">
                 <li class="link-list__item">
                   <a href="https://qiita.com/hirokiwa/items/61a7a61523f04d30b666" target="_blank" rel="noopener noreferrer" class="link-item">
-                    <span class="link-item__icon material-symbols-outlined" aria-hidden="true">edit</span>
-                    <span class="link-item__text">{{aiBlog.relatedLink1}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                    <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+                    <span class="link-item__text">{{aiBlog.relatedLink1}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                     <span class="sr-only">{{common.externalLinkSrOnly}}</span>
                   </a>
                 </li>
@@ -187,7 +186,7 @@
               <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/89170014/275133791-23c5e55f-afea-40d1-9d24-b43e4738dd22.png" alt="{{qrReader.imageAlt}}" width="1200" height="630" class="project-card__image">
               <h3 class="project-card__title">{{qrReader.title}}</h3>
               <a href="https://yomitorikun.hirokiwa.com/" target="_blank" rel="noopener noreferrer" class="link-item link-item--main">
-                <span class="link-item__text">{{qrReader.mainLinkLabel}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+                <span class="link-item__text">{{qrReader.mainLinkLabel}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
                 <span class="sr-only">{{common.externalLinkSrOnly}}</span>
               </a>
               <p class="project-card__description">{{qrReader.description}}</p>
@@ -201,15 +200,15 @@
         <ul class="link-list">
           <li class="link-list__item">
             <a href="https://note.com/hirokiwa/n/n66806f8bd2cf" target="_blank" rel="noopener noreferrer" class="link-item">
-              <span class="link-item__icon material-symbols-outlined" aria-hidden="true">edit</span>
-              <span class="link-item__text">{{other.link1}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+              <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+              <span class="link-item__text">{{other.link1}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
               <span class="sr-only">{{common.externalLinkSrOnly}}</span>
             </a>
           </li>
           <li class="link-list__item">
             <a href="https://note.com/hirokiwa/n/ndb2b8585ea9d" target="_blank" rel="noopener noreferrer" class="link-item">
-              <span class="link-item__icon material-symbols-outlined" aria-hidden="true">edit</span>
-              <span class="link-item__text">{{other.link2}}<span class="link-item__icon--trailing material-symbols-outlined" aria-hidden="true">open_in_new</span></span>
+              <svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon icon-symbol" aria-hidden="true" focusable="false"><path d="M200-200h57l391-391-57-57-391 391v57Zm-80 80v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm640-584-56-56 56 56Zm-141 85-28-29 57 57-29-28Z"/></svg>
+              <span class="link-item__text">{{other.link2}}<span class="link-item__suffix"><svg viewBox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg" class="link-item__icon--trailing icon-symbol" aria-hidden="true" focusable="false"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></span></span>
               <span class="sr-only">{{common.externalLinkSrOnly}}</span>
             </a>
           </li>
